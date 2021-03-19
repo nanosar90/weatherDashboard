@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <title>WeatherGif</title>
+    
+</head>
+<body class="bg-white flex-col">
+    <div class="flex items-center justify-between flex-wrap bg-blue-400 p-6">
+        <div class="flex items-center flex-col flex-shrink-0 mx-auto">
+            <h1 class='text-gray-200 text-5xl'>WeatherGif</h1>
+            <p class='text-gray-200 text-2xl'>Start your day with the weather and a laugh!</p>
+        </div>
+
+        
+    </div>
+
+    
+  <!-- Static sidebar for desktop -->
+  
+  
+    
+    
+    <main class="flex-1 md:flex relative z-0 overflow-y-auto focus:outline-none" tabindex="0">
+
+      
+      
+      <div class='bg-gray-100 xs:full md:80 flex flex-col p-2 md:flex-0 border rounded'>
+         <div class='flex flex-row'>
+          <button class= "text-gray-300 mr-4 h-6 w-6 flex flex-row" id="search-button" type="submit"><i class="fa fa-search "></i></button>
+          <input class=" text-blue-400 h-6 hover:bg-blue-400 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md" id="search-box" type="text" placeholder="Input your City here..." name="search">
+          </div>
+        <ul  class="text-gray-300" id="search-results">
+          
+        </ul>
+        
+      </div>
+
+      <div class='flex-col'>
+      
+      <div class="py-6 md:flex-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 class="text-4xl font-semibold text-blue-400">Today's Weather</h1>
+          <h1 class="text-4xl font-semibold id='name' text-blue-400"></h1>
+          <h1 class="text-4xl font-semibold id='todaysDate' text-blue-400"></h1>
+          <h1 class="text-4xl font-semibold id='desc' text-blue-400"></h1>
+
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 ">
+          <!-- Replace with your content -->
+          <li class="col-span-1 flex flex-col text-center bg-gray-100 rounded-lg shadow divide-y divide-gray-200 border-4 border border-blue-400 rounded-lg m-2">
+            <div class="flex-1 flex flex-col p-8">
+              <img class="w-80 h-50 flex-shrink-0 mx-auto" id='weatherGif' src="" alt="">
+              <img class="w-80 h-50 flex-shrink-0 mx-auto" id='todaysIcon' src="" alt="">
+              <ul>
+                <li id="temp">Temp</li>
+                <li id="humidity">Humidity</li>
+                <li id="wind">Wind</li>
+                <li id="uvIndex">UV</li>
+
+            </ul>
+              
+              
+            </div>
+            
+          </li>
+
+          
+
+          
+
+          
+                
+            
+          <!-- /End replace -->
+        </div>
+      </div>
+      
+      <div class="py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 class="text-4xl font-semibold text-blue-400">5-day Forecast</h1>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+          <!-- Replace with your content -->
+          <div class="py-4">
+            <div class=" h-120">
+
+              <ul class="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4">
+                <li class="col-span-2 flex flex-col text-center bg-gray-100 rounded-lg shadow divide-y divide-gray-200 border-4 border border-blue-400 rounded-lg m-2">
+                    <span id='forecastDate'></span>
+                    <img class="w-80 h-50 flex-shrink-0 mx-auto" id='forecastIcon' src="" alt="">
+                    <ul>
+                        <li id="temp">Temp</li>
+                        <li id="humidity">Humidity</li>
+                        <li id="wind">Wind</li>
+                        <li id="uvIndex">UV</li>
+      
+                  </ul>
+                </li>
+
+                <li class="col-span-2 flex flex-col text-center bg-gray-100 rounded-lg shadow divide-y divide-gray-200 border-4 border border-blue-400 rounded-lg m-2">
+                    <span id='forecastDate'></span>
+                    <img class="w-80 h-50 flex-shrink-0 mx-auto" id='forecastIcon' src="" alt="">
+                    <ul>
+                        <li id="temp">Temp</li>
+                        <li id="humidity">Humidity</li>
+                        <li id="wind">Wind</li>
+                        <li id="uvIndex">UV</li>
+      
+                  </ul>
+                </li>
+
+                <li class="col-span-2 flex flex-col text-center bg-gray-100 rounded-lg shadow divide-y divide-gray-200 border-4 border border-blue-400 rounded-lg m-2">
+                    <span id='forecastDate'></span>
+                    <img class="w-80 h-50 flex-shrink-0 mx-auto" id='forecastIcon' src="" alt="">
+                    <ul>
+                        <li id="temp">Temp</li>
+                        <li id="humidity">Humidity</li>
+                        <li id="wind">Wind</li>
+                        <li id="uvIndex">UV</li>
+      
+                  </ul>
+                </li>
+
+                <li class="col-span-2 flex flex-col text-center bg-gray-100 rounded-lg shadow divide-y divide-gray-200 border-4 border border-blue-400 rounded-lg m-2">
+                    <span id='forecastDate'></span>
+                    <img class="w-80 h-50 flex-shrink-0 mx-auto" id='forecastIcon' src="" alt="">
+                    <ul>
+                        <li id="temp">Temp</li>
+                        <li id="humidity">Humidity</li>
+                        <li id="wind">Wind</li>
+                        <li id="uvIndex">UV</li>
+      
+                  </ul>
+                </li>
+
+                <li class="col-span-2 flex flex-col text-center bg-gray-100 rounded-lg shadow divide-y divide-gray-200 border-4 border border-blue-400 rounded-lg m-2">
+                    <span id='forecastDate'></span>
+                    <img class="w-80 h-50 flex-shrink-0 mx-auto" id='forecastIcon' src="" alt="">
+                    <ul>
+                        <li id="temp">Temp</li>
+                        <li id="humidity">Humidity</li>
+                        <li id="wind">Wind</li>
+                        <li id="uvIndex">UV</li>
+      
+                  </ul>
+                </li>
+
+                
+              
+                
+
+            </div>
+          </div>
+          <!-- /End replace -->
+        </div>
+
+        
+
+      </div>
+
+
+      </div>
+
+
+    </main>
+  </div>
+</div>
+
+
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
